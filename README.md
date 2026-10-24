@@ -56,7 +56,8 @@ omarchy plugin add https://github.com/Pro-Termux-arch/omarchy-ytmusic-plus.git -
 The bar shows a compact icon (mini spectrum while playing). Hover 100 ms and
 it expands into the full pill: poster, scrolling title, live spectrum,
 previous / play / next. Moving across the buttons never collapses it;
-leaving collapses it a beat later. `barmode`, bar-expand, and visualizer
+leaving collapses it a beat later. While a track is playing the full pill
+stays up and never collapses on hover. `barmode`, bar-expand, and visualizer
 are all tunable in Settings → Appearance.
 
 ## Features in brief

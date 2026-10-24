@@ -143,7 +143,8 @@ manifest.json  hypr-bindings.lua  README.md  LICENSE  CHANGELOG.md  Version.txt
   VizBars exact 48 when on / 0 when off; pill chrome 10→5; poster slot
   collapses to 0 with no thumbnail. Hover is v2.3.3 instant-follow
   (barHover 5-term OR straight into pillFull — no dwell/poll/settle, per
-  user call); pill width 260ms OutExpo, compactBox crossfade 150 + pop 200
+  user call); v2.4.3: `playing` also pins pillFull, so hover never
+  collapses the pill mid-track; pill width 260ms OutExpo, compactBox crossfade 150 + pop 200
   OutBack, pillRow pop 220 OutBack. Fullscreen swap: fsSwapAnim fades
   contentWrap 0.35->1 over 220ms (onFullScreenChanged; geometry untouched).
   dockpos top|bottom (normal mode only; fullscreen forces bottom): backend

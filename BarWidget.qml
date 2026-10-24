@@ -46,7 +46,7 @@ BarWidget {
   property bool vizOn: true
   readonly property bool barHover: pillHover.containsMouse || bodyMouse.containsMouse || compactMouse.containsMouse || bodyMouse.pressed || compactMouse.pressed
   property bool leaveGrace: false // collapse debounce: stays up 120ms after leave so button-hops never minimize
-  readonly property bool pillFull: root.hasTrack && !root.idleHidden && root.barMode !== "compact" && (!root.barExpand || root.barHover || root.leaveGrace)
+  readonly property bool pillFull: root.hasTrack && !root.idleHidden && root.barMode !== "compact" && (!root.barExpand || root.playing || root.barHover || root.leaveGrace) // playing pins full controls; hover-expand only applies when paused
   Timer {
     id: leaveGraceTimer
     interval: 120
