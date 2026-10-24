@@ -715,7 +715,7 @@ ytdlp_playlist() {
 # the manifest version plus short git SHAs, and availability compares FULL
 # SHAs. update-check is read-only on stable (beta refreshes its version guard via git fetch); never writes state/queue/settings/mpv;
 # update-apply delegates to the plugin manager and never deletes anything.
-UPDATE_UPSTREAM="github.com/Pro-Termux-arch/omarchy-ytmusic-plus"
+UPDATE_UPSTREAM="github.com/avdrav1/omarchy-ytmusic-plus"
 UPDATE_TIMEOUT_SHORT=20
 UPDATE_TIMEOUT_LONG=180
 
@@ -728,6 +728,8 @@ update_plugin_dir() {
 }
 
 # Verify origin points at our upstream (https + ssh forms allowed).
+# Pro-Termux-arch is the pre-transfer owner; GitHub redirects it here, so
+# existing installs keep that origin and must stay trusted.
 # Prints the url, returns 0 when trusted; 1 on mismatch (caller refuses with
 # stderr + exit 2); 2 when unverifiable (no git binary / no origin remote).
 update_origin_url() {
@@ -735,9 +737,9 @@ update_origin_url() {
   command -v git >/dev/null 2>&1 || return 2
   url="$(git -C "$dir" remote get-url origin 2>/dev/null)" || return 2
   [[ -n "$url" ]] || return 2
-  if [[ "$url" =~ ^https://github\.com/Pro-Termux-arch/omarchy-ytmusic-plus(\.git)?/?$ ]]; then printf '%s\n' "$url"; return 0; fi
-  if [[ "$url" =~ ^git@github\.com:Pro-Termux-arch/omarchy-ytmusic-plus(\.git)?/?$ ]]; then printf '%s\n' "$url"; return 0; fi
-  if [[ "$url" =~ ^ssh://git@github\.com/Pro-Termux-arch/omarchy-ytmusic-plus(\.git)?/?$ ]]; then printf '%s\n' "$url"; return 0; fi
+  if [[ "$url" =~ ^https://github\.com/(avdrav1|Pro-Termux-arch)/omarchy-ytmusic-plus(\.git)?/?$ ]]; then printf '%s\n' "$url"; return 0; fi
+  if [[ "$url" =~ ^git@github\.com:(avdrav1|Pro-Termux-arch)/omarchy-ytmusic-plus(\.git)?/?$ ]]; then printf '%s\n' "$url"; return 0; fi
+  if [[ "$url" =~ ^ssh://git@github\.com/(avdrav1|Pro-Termux-arch)/omarchy-ytmusic-plus(\.git)?/?$ ]]; then printf '%s\n' "$url"; return 0; fi
   return 1
 }
 
@@ -1903,7 +1905,7 @@ case "${1:-}" in
             // empty) end' 2>/dev/null || true
       fi
     }
-    UA="omarchy-ytmusic-plus (https://github.com/Pro-Termux-arch/omarchy-ytmusic-plus)"
+    UA="omarchy-ytmusic-plus (https://github.com/avdrav1/omarchy-ytmusic-plus)"
     has_ts() {
       # stdin text carries at least one [mm:ss] LRC tag (synced, not plain)
       grep -q -m 1 -E '\[[0-9]+:[0-9]{1,2}' 2>/dev/null

@@ -13,7 +13,7 @@ _____________________________________________
 <img src="assets/desktop-playlist.png" width="800" alt="YTMusic Plus fullscreen player">
 
 ```sh
-omarchy plugin add https://github.com/Pro-Termux-arch/omarchy-ytmusic-plus.git --enable
+omarchy plugin add https://github.com/avdrav1/omarchy-ytmusic-plus.git --enable
 ```
 
 </div>
@@ -106,7 +106,8 @@ the upstream SHA differs.
 - **Revert last update** (same group) resets to the pre-update snapshot,
   then reloads the shell. No snapshot → it tells you so.
 - The `origin` remote must be
-  `github.com/Pro-Termux-arch/omarchy-ytmusic-plus` (https or ssh); anything
+  `github.com/avdrav1/omarchy-ytmusic-plus` (https or ssh; the pre-transfer
+  `Pro-Termux-arch` URL is also accepted, since GitHub redirects it); anything
   else is refused (anti-hijack, exit 2).
 - **Auto-apply updates** (default on) applies a background find automatically.
   A background check runs on open when the last check is older than 24 h
@@ -132,7 +133,7 @@ the upstream SHA differs.
 ## Install
 
 ```sh
-omarchy plugin add https://github.com/Pro-Termux-arch/omarchy-ytmusic-plus.git --enable
+omarchy plugin add https://github.com/avdrav1/omarchy-ytmusic-plus.git --enable
 ```
 
 Open it from the bar icon or directly:

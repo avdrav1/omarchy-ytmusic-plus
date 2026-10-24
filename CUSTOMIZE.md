@@ -9,7 +9,7 @@
 - Source of truth: `~/Projects/omarchy-ytmusic-plus/` — **NOT a git repo**.
   Edit files directly here. Never `git init` here.
 - Publish repo (git, `master`): `~/Documents/Projects/Youtube Music Plus/`
-  → `https://github.com/Pro-Termux-arch/omarchy-ytmusic-plus`.
+  → `https://github.com/avdrav1/omarchy-ytmusic-plus`.
 - Live install: `~/.config/omarchy/plugins/local.ytmusic-plus/`.
   Plugin id `local.ytmusic-plus` — NEVER rename (bar layout + IPC depend on it).
 - Test binary: `B=~/Projects/omarchy-ytmusic-plus/bin/ytmusic-plus`.
