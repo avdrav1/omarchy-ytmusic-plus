@@ -1,5 +1,9 @@
 <div align="center">
-
+_____________________________________________
+|Important note!!                           |
+|The Project is being maintained by Avdrav1.|
+|Thank you                                  |
+_____________________________________________
 # YTMusic Plus for Omarchy
 
 **Privacy-first, login-free YouTube music player for the Omarchy bar.**
